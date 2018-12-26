@@ -1,6 +1,6 @@
 {
   "name": "ncollection",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create collection of objects over object or array instance",
   "main": "main.js",
   "scripts": {
@@ -24,5 +24,8 @@
   "homepage": "https://github.com/feduardof/ncollection#readme",
   "devDependencies": {
     "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "loadash": "^1.0.0"
   }
 }

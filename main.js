@@ -1,7 +1,7 @@
 const Collection = require('./src/Collection');
 const Interable = require('./src/Interable');
 
-module.export = {
+module.exports = {
     Collection,
     Interable
 }

@@ -1,3 +1,4 @@
+var _ = require('lodash');
 const Interable = require('./Interable');
 const CollectionProxy = require('./CollectionProxy');
 
@@ -100,7 +101,7 @@ class Collection extends Interable  {
         return this;
     }
     delete(fc) {
-        let data = this._data instanceof Array ? [...this._data] : { ...this._data };
+        let data = _.cloneDeep(this._data);
         let interable = new Interable(this._data);
         let index = 0;
 
