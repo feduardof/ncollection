@@ -51,6 +51,12 @@ describe("Collection type Array", function () {
 		it("when pass function", () => {
 			assert.equal(coll.delete((item) => item.a == "Usuario 2").length, 2);
 		});
+		it("sequential", () => {
+			assert.equal(coll.delete(1).delete([0]).length, 1);
+		});
+		it("sequential", () => {
+			assert.equal(coll.delete(1).delete([2]).length, 2);
+		});
 	});
 	describe("#push()", function () {
 		let coll;
@@ -153,6 +159,9 @@ describe("Collection type Object", function () {
 		});
 		it("when pass function", () => {
 			assert.equal(coll.delete((item) => item.a == "Usuario 2").length, 2);
+		});
+		it("sequential", () => {
+			assert.equal(coll.delete("a").delete(["b"]).length, 1);
 		});
 	});
 	describe("#push()", function () {

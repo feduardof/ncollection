@@ -102,16 +102,16 @@ class Collection extends Interable  {
 		return this;
 	}
 	delete(fc) {
-		let data = this._data instanceof Array ? [...this._data] : { ...this._data };
+		// let data = this._data instanceof Array ? [...this._data] : { ...this._data };
 		let interable = new Interable(this._data);
 		let index = 0;
 
 		let removeData = (index) => {
-			if (data instanceof Array) {
-				data.splice(index, 1);
+			if (this._data instanceof Array) {
+				this._data.splice(index, 1);
 			} else {
 				if (typeof index == "number") index = this._getPropertyInPosition(index);
-				Reflect.deleteProperty(data, index);
+				Reflect.deleteProperty(this._data, index);
 			}
 		};
 
@@ -133,7 +133,8 @@ class Collection extends Interable  {
 			}
 		}
 
-		return new Collection(data);
+		this.interableSetData(this._data);
+		return this;
 	}
     
 }

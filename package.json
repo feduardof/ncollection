@@ -1,6 +1,6 @@
 {
   "name": "ncollection",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Create collection of objects over object or array instance",
   "main": "main.js",
   "scripts": {
