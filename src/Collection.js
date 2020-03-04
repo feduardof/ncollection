@@ -19,12 +19,12 @@ class Collection extends Interable  {
 		return valueTemp;
 	}
 
-	groupBy(campo) {
+	groupBy(field) {
 		let retorno = {};
 		let arrayData = [ ...this._data ];
         
 		arrayData.forEach(item => {
-			let value = this._getValueByDot(campo, item);
+			let value = this._getValueByDot(field, item);
 			if (!retorno[value]) retorno[value] = [];
 			retorno[value].push(item);
 		});
